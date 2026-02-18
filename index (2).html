@@ -1,0 +1,43 @@
+<html>
+<style>
+body { background-color: pink; }
+</style>
+<body>
+
+<h1>Shkruaj Mish, Vaj ose Oriz ne fushen e hyrjes dhe kliko butonin</h1>
+
+<p>Shkruaj Mish, Vaj ose Oriz:</p>
+
+<input id="ushqimi">
+<button type="button" onclick="myFunction()">Provo</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+
+  var x, text;
+
+  // Merr vlerën nga fusha e hyrjes
+  x = document.getElementById("ushqimi").value;
+  
+  // Kontrolli
+  if (x === "oriz") {
+    text = "<h2><font color='red'>Duket qe nuk te hahet gje!!!</font></h2>";
+  } 
+  else if (x === "mish") {
+    text = "<h2><font color='green'>Zgjedhje e mire! Mish 😋</font></h2>";
+  } 
+  else if (x === "vaj") {
+    text = "<h2><font color='blue'>Vetem vaj? Duhet dhe dicka tjeter!</font></h2>";
+  } 
+  else {
+    text = "<h2><font color='orange'>Shkruaj vetem: Mish, Vaj ose Oriz!</font></h2>";
+  }
+
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
